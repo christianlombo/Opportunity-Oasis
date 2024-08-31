@@ -1,0 +1,652 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.index-page {
+  position: relative;
+  background-image: url('images/business-people-shaking-hands-outside-of-office-building.jpg');
+  background-size: cover;
+  /* Ensures the image covers the entire page */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  margin: 0;
+  /* Removes default margin */
+  padding: 0;
+  /* Removes default padding */
+  font-family: "Poppins", sans-serif;
+  /* Ensure consistent font usage */
+  filter: brightness(0.8);
+}
+
+.index-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  /* Semi-transparent overlay */
+  z-index: -1;
+  /* Ensure it's behind content */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 42px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f0f4ff;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.large-text {
+  font-size: 80px;
+}
+
+.mission_text {
+  font-size: 80px;
+}
+
+.news_text {
+  font-size: 80px;
+}
+
+.to-text {
+  font-size: 70px;
+}
+
+.oasis-text {
+  font-size: 125px;
+}
+
+.content {
+  padding: 100px;
+  text-align: center;
+}
+
+.content h1 {
+  text-align: left;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 24px;
+}
+
+.contact {
+  min-height: 100vh;
+  background-color: lightgray;
+  padding: 50px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: 63px;
+  margin-bottom: 40px;
+  color: #333;
+  padding: 100px;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-info i {
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card {
+  width: 325px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.card-content .button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  color: #fff;
+}
+
+.dashboard-section {
+  margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.dashboard-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dashboard-section button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dashboard-section button:hover {
+  background-color: #45a049;
+}
+
+.about-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-section img {
+  width: 60%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 18px;
+  color: #555;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.about-section li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.accordion {
+  margin-top: 40px;
+}
+
+.accordion-item {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.accordion-content {
+  padding: 20px;
+  display: none;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-item {
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.news-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+.news-content .button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.news-content .button:hover {
+  background-color: #555;
+}
+
+.banner1 {
+  width: 100%;
+  height: 300px;
+  /* Adjust height as needed */
+  background-color: #333;
+  /* Adjust background color as needed */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.banner1 h1 {
+  font-size: 125px;
+  /* Large text size */
+  margin: 0;
+}
+
+.post {
+  flex: 0 0 49%;
+  /* Adjust width to ensure they fit side by side */
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.post h4 {
+  margin-top: 0;
+}
+
+.post p {
+  margin-bottom: 0;
+}
+
+.transparent-image {
+  width: 150px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  /* Additional styling */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.login-page {
+  background-image: url('images/0000ff.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  filter: brightness(0.8);
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.social-btn.google {
+  background-color: #4285f4;
+  color: white;
+}
+
+.social-btn.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.divider {
+  font-size: 14px;
+  color: #aaa;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body.contact-page {
+  background-image: url('images/business-people-shaking-hands-outside-of-office-building.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Removed the brightness filter */
+}
+
+.contact {
+  min-height: 100vh;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  /* Ensure the container's background is solid white */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your existing CSS file */
+
+.cover-letter-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px; /* Adjusted margin to create space between buttons */
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
